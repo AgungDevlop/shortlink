@@ -32,15 +32,12 @@ export default function Agung() {
     }, []);
 
     useEffect(() => {
-     
         const matchedLink = redirectData.find((item) => Object.keys(item).includes(parameters));
-        
         if (matchedLink) {
               const key = Object.keys(matchedLink)[0];
               const link = matchedLink[key];
               window.location.href = link;
             }
-            
           }, [parameters, redirectData]);
 
     useEffect(() => {
